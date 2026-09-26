@@ -23,7 +23,7 @@ func _move_selector_to(button: Button) -> void:
 	selector.global_position = Vector2(target_pos.x - 14, target_pos.y + button.size.y / 2 - selector.size.y / 2)
 
 func _on_vs_ai_pressed() -> void:
-	get_tree().change_scene_to_file("res://Game.tscn")
+	get_tree().change_scene_to_file("res://pong_vs_human.tscn")
 
 func _on_vs_player_pressed() -> void:
-	get_tree().change_scene_to_file("res://Game.tscn")
+	get_tree().change_scene_to_file("res://pong_vs_human.tscn")
