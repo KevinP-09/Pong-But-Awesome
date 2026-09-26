@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://mtba1jkcv43f"]
+
+[ext_resource type="Theme" uid="uid://cy1j30g4u0m6r" path="res://retro_theme.tres" id="1_oaf7c"]
+[ext_resource type="Script" uid="uid://djdofl8tmhwbg" path="res://game_mode_screen.gd" id="2_n653x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oaf7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n653x"]
+
+[node name="GameModeScreen" type="Control" unique_id=907595316]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oaf7c")
+script = ExtResource("2_n653x")
+
+[node name="Background" type="ColorRect" parent="." unique_id=239418946]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1687273134]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=246876672]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=721191535]
+layout_mode = 2
+text = "CHOOSE MODE"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1717756298]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VsAIButton" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer" unique_id=323297366]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oaf7c")
+text = "1P VS AI"
+flat = true
+
+[node name="VsPlayerButton" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer" unique_id=1689435811]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n653x")
+text = "1P VS 2P
+"
+flat = true
+
+[node name="SelectorIndicator" type="ColorRect" parent="." unique_id=712212021]
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 12.0

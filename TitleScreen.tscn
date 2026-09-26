@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cjpw0moqqi6yc"]
+
+[ext_resource type="Script" uid="uid://caogxf28px5jl" path="res://TitleScreen.gd" id="1_fnlyl"]
+[ext_resource type="Theme" uid="uid://cy1j30g4u0m6r" path="res://retro_theme.tres" id="1_pkhjh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5evtv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3ltx"]
+
+[node name="TitleScreen" type="Control" unique_id=2006963242]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pkhjh")
+script = ExtResource("1_fnlyl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1192531992]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SelectorIndicator" type="ColorRect" parent="." unique_id=808962012]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1731412370]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=941381838]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=265971918]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "PONG BUT AWESOME"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1001211519]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer" unique_id=823990234]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5evtv")
+text = "PLAY"
+flat = true
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer" unique_id=1350058651]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p3ltx")
+text = "EXIT"
+flat = true
